@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/book.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css"/>
+        
+
+    </head>
+    <body class="p-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="row g-0 gap-md-0"">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-6">
+                                <div id="filter">
+                                    <select class="form-select form-select-sm" aria-label=".form-select-lg example" id="bookSelect">
+                                        <option selected>Select one of the book</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <button class="w-100 btn btn-sm btn-success" type="submit" id="buttonclick">Pick</button> 
+                            </div>
+                            <div class="col-2 d-flex align-items-center">
+                                <div id="loading" class="spinner-border spinner-border-sm text-primary">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="col" >
+                            <h1 class="text-center">Binar's Book Store</h1>
+                            <img class="w-75 h-75 rounded mx-auto d-block"src="image/undraw_cat.svg">
+                        </div>
+                    
+                
+            </div>
+            <div class="row">
+                <div class="container mt-5">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-10">
+                            <div class="card p-3  py-4">
+                                <div class="row g-3 mt-2">
+                                    <div class="col-md-5">
+                                        <input id="search" type="text" class="form-control form-control-sm" placeholder="Search"> 
+                                    </div>
+                                    <div class="col-md-5">
+                                        <select id="categorySelect" class="form-control form-control-sm" aria-label=".form-select-lg example">
+                                            <option selected>Select one of the category</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button class="w-100 btn btn-sm btn-success" id="searchbutton">Search Results</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="container-fluid p-3 d-none d-md-block">
+                <table class="table" id="thistable">
+                    <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">AUTHOR</th>
+                        <th scope="col">PRICE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="TotalHarga">
+                <div class="row">
+                    <div class="col-10"></div>
+                    <div class="col-1">
+                        <p>
+                            Total:
+                        </p>
+                    </div>
+                    <div class="col-1">
+                        <p id="total">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="searchAlert" class="d-none alert alert-danger" role="alert">
+            Simple Alert !
+        </div>
+    </body>
+    <script src="js/script.js"></script>
+</html>
